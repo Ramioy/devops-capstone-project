@@ -37,7 +37,7 @@ spec:
         value: $(params.branch)
       runAfter:
         - init
-
+    - name: lint
     - name: tests
       workspaces:
         - name: source
@@ -83,3 +83,4 @@ spec:
           oc get pods -l app=accounts
       runAfter:
         - build        
+
